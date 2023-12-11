@@ -20,3 +20,5 @@ var result = EntryStatic.getAllBlocks()
 
 copy(JSON.stringify(result))
 ```
+
+https://app.quicktype.io/?l=ts
