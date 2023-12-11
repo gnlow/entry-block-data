@@ -9,13 +9,14 @@ var result = EntryStatic.getAllBlocks()
             "arduino"
         ].includes(category)
     )
-    .map(({ category, blocks }) =>
-        blocks.map(blockName => ({
+    .map(({ category, blocks }) =>({
+        category,
+        blocks: blocks.map(blockName => ({
             ...Entry.block[blockName],
             blockName,
             template: Lang.template[blockName],
         }))
-    )
+    }))
 
 copy(JSON.stringify(result))
 ```
